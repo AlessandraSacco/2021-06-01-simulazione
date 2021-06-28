@@ -46,8 +46,14 @@ public class FXMLController {
 
     @FXML
     void doCreaGrafo(ActionEvent event) {
-    	
-
+    	this.model.creaGrafo();
+    	if(this.model.grafo()==null) {
+    		txtResult.appendText("Il grafo è vuoto");
+    	}
+    	else {
+    
+    	txtResult.appendText("Grafo creato con "+this.model.getVertici()+" vertici e "+this.model.getArchi()+"\n\n");
+    	}
     }
 
     @FXML
